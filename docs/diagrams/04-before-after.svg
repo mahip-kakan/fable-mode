@@ -1,45 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" width="920" height="420">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Before and After One-shot vs Fable Mode</title>
+  <desc id="desc">Test harness comparison for 401 auth bug demo</desc>
   <defs>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#312e8120"/>
-    </filter>
-    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#eef2ff"/>
-      <stop offset="100%" stop-color="#ede9fe"/>
-    </linearGradient>
+    <style>
+      .title { font: 700 26px Helvetica, Arial, sans-serif; fill: #312E81; }
+      .subtitle { font: 400 14px Helvetica, Arial, sans-serif; fill: #4F46E5; }
+      .label { font: 700 12px Helvetica, Arial, sans-serif; letter-spacing: 0.08em; }
+      .flow { font: 400 13px Helvetica, Arial, sans-serif; }
+      .code { font: 400 11px Courier New, monospace; }
+      .result { font: 400 13px Helvetica, Arial, sans-serif; }
+      .verdict-bad { font: 700 13px Helvetica, Arial, sans-serif; fill: #DC2626; }
+      .verdict-good { font: 700 13px Helvetica, Arial, sans-serif; fill: #059669; }
+      .metric { font: 400 12px Helvetica, Arial, sans-serif; fill: #475569; }
+      .vs { font: 700 16px Helvetica, Arial, sans-serif; fill: #475569; }
+    </style>
   </defs>
-  <rect width="100%" height="100%" fill="#ffffff"/><text x="40" y="42" font-family="Inter,Segoe UI,sans-serif" font-size="28" font-weight="700" fill="#312e81">Before / After</text><text x="40" y="70" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#4f46e5">Same task — different procedure</text><text x="60" y="110" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#dc2626">ONE-SHOT</text>
-  <g filter="url(#shadow)">
-    <rect x="40" y="125" width="300" height="50" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-    <text x="190.0" y="150.0" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="14" fill="#312e81">Write handler</text>
-  </g>
-  <g filter="url(#shadow)">
-    <rect x="40" y="190" width="300" height="50" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-    <text x="190.0" y="215.0" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="14" fill="#312e81">Looks correct</text>
-  </g>
-  <line x1="190" y1="175" x2="190" y2="190" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-  <defs><marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#dc2626"/></marker></defs><text x="40" y="270" font-family="Inter,Segoe UI,sans-serif" font-size="14" fill="#dc2626">Ships → 500 on unauthenticated request</text><text x="440" y="110" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#059669">FABLE MODE</text>
-  <g filter="url(#shadow)">
-    <rect x="400" y="125" width="140" height="48" rx="12" fill="#ffedd5" stroke="#c2410c" stroke-width="2"/>
-    <text x="470.0" y="149.0" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="13" fill="#312e81">Stage map</text>
-  </g>
-  <g filter="url(#shadow)">
-    <rect x="560" y="125" width="140" height="48" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
-    <text x="630.0" y="149.0" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="13" fill="#312e81">Tests first</text>
-  </g>
-  <g filter="url(#shadow)">
-    <rect x="400" y="190" width="300" height="50" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-    <text x="550.0" y="215.0" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="14" fill="#312e81">Proof FAIL → null guard</text>
-  </g>
-  <g filter="url(#shadow)">
-    <rect x="400" y="255" width="300" height="50" rx="12" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
-    <text x="550.0" y="280.0" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="14" fill="#312e81">Proof PASS → ship</text>
-  </g>
-  <line x1="540" y1="173" x2="540" y2="190" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-  <defs><marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#059669"/></marker></defs>
-  <line x1="550" y1="240" x2="550" y2="255" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-  <defs><marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#059669"/></marker></defs>
-  <g filter="url(#shadow)">
-    <rect x="180" y="320" width="560" height="56" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
-    <text x="460.0" y="348.0" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#312e81">Measured: 1 pass / 1 fail  →  3 pass / 0 fail</text>
-  </g></svg>
+  <rect width="1200" height="560" fill="#FFFFFF"/>
+  <text x="600" y="44" text-anchor="middle" class="title">Before &amp; After — One-shot vs Fable Mode</text>
+  <text x="600" y="70" text-anchor="middle" class="subtitle">Measured outcome from the test harness (401 auth bug demo)</text>
+
+  <rect x="60" y="100" width="500" height="380" rx="12" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+  <text x="80" y="128" class="label" fill="#B91C1C">ONE-SHOT ATTEMPT</text>
+  <rect x="80" y="148" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#FCA5A5"/>
+  <text x="310" y="176" text-anchor="middle" class="flow" fill="#991B1B">Write handler → Ship answer</text>
+  <rect x="80" y="210" width="460" height="72" rx="8" fill="#FFFFFF" stroke="#FECACA"/>
+  <text x="96" y="232" class="code" fill="#7F1D1D">// Missing auth guard — looks fine</text>
+  <text x="96" y="252" class="code" fill="#7F1D1D">const user = await getUser(req);</text>
+  <text x="96" y="272" class="code" fill="#7F1D1D">return Response.json({ count }); // 401 never checked</text>
+  <rect x="80" y="300" width="460" height="100" rx="8" fill="#FEE2E2" stroke="#EF4444"/>
+  <text x="310" y="330" text-anchor="middle" class="result" fill="#991B1B">
+    <tspan x="310" dy="0" font-weight="700">Test result</tspan>
+    <tspan x="310" dy="22">1 pass · 1 fail</tspan>
+    <tspan x="310" dy="22">Unauthenticated request returns 200</tspan>
+  </text>
+  <text x="310" y="430" text-anchor="middle" class="verdict-bad">✗ Procedure skipped — no proof step</text>
+
+  <circle cx="600" cy="290" r="40" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+  <text x="600" y="297" text-anchor="middle" class="vs">VS</text>
+
+  <rect x="640" y="100" width="500" height="380" rx="12" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="660" y="128" class="label" fill="#047857">FABLE MODE</text>
+  <rect x="660" y="148" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="890" y="176" text-anchor="middle" class="flow" fill="#065F46">Stage map → Write tests → Implement → Proof Block</text>
+  <rect x="660" y="210" width="460" height="72" rx="8" fill="#F5F3FF" stroke="#7C3AED" stroke-dasharray="8 8"/>
+  <text x="676" y="232" class="code" fill="#4C1D95">Proof 2 — Auth paths: FAIL</text>
+  <text x="676" y="252" class="code" fill="#4C1D95">Check: node --test handler.test.js</text>
+  <text x="676" y="272" class="code" fill="#4C1D95">Evidence: expected 401, received 200</text>
+  <rect x="660" y="300" width="460" height="44" rx="8" fill="#FFFFFF" stroke="#6EE7B7"/>
+  <text x="890" y="328" text-anchor="middle" class="flow" fill="#065F46">Fix applied → Re-run proof → PASS</text>
+  <rect x="660" y="356" width="460" height="88" rx="8" fill="#D1FAE5" stroke="#10B981"/>
+  <text x="890" y="386" text-anchor="middle" class="result" fill="#065F46">
+    <tspan x="890" dy="0" font-weight="700">Test result</tspan>
+    <tspan x="890" dy="22">3 pass · 0 fail</tspan>
+    <tspan x="890" dy="22">401 guard verified before delivery</tspan>
+  </text>
+  <text x="890" y="462" text-anchor="middle" class="verdict-good">✓ Proof Block caught bug before ship</text>
+
+  <rect x="300" y="500" width="600" height="32" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="600" y="521" text-anchor="middle" class="metric">Same model · Same task · Different procedure</text>
+</svg>

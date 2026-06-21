@@ -1,0 +1,7 @@
+Fable Mode diagram palette (Draw.io)
+Primary:   #4F46E5  fill #EEF2FF  stroke #4338CA
+Success:   #059669  fill #ECFDF5  stroke #047857
+Problem:   #DC2626  fill #FEF2F2  stroke #B91C1C
+Neutral:   #475569  fill #F8FAFC  stroke #334155
+Accent:    #0EA5E9  fill #F0F9FF  stroke #0284C7
+Proof:     #7C3AED  fill #F5F3FF  stroke #6D28D9

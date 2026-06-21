@@ -36,7 +36,7 @@ earns the next.
 
 <p align="center"><em>Measured outcome from the test harness: 1 pass / 1 fail → 3 pass / 0 fail</em></p>
 
-Editable sources: [`docs/diagrams/`](docs/diagrams/) (`.excalidraw`, `.svg`, `.png`)
+Editable sources: [`docs/diagrams/`](docs/diagrams/) (`.drawio`, `.svg`, `.png`)
 
 ---
 
@@ -646,7 +646,7 @@ fable-mode/
 ├── README.md
 ├── EXAMPLES.md
 ├── LICENSE
-├── docs/diagrams/            ← Excalidraw + PNG product diagrams
+├── docs/diagrams/            ← Draw.io block diagrams + PNG for README
 ├── fable-mode/SKILL.md       ← master skill (canonical loop)
 ├── fable-sonnet/SKILL.md
 ├── fable-haiku/SKILL.md

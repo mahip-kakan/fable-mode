@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" modified="2026-06-21T12:00:00.000Z" agent="Fable Mode" version="22.1.0" type="device">
+  <diagram id="product-overview" name="Product Overview">
+    <mxGraphModel dx="1200" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Fable Mode — Product Overview" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#312E81;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="520" height="36" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Turn agent chaos into staged, evidence-backed delivery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontColor=#4F46E5;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="58" width="560" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="problem-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="320" height="340" as="geometry"/>
+        </mxCell>
+        <mxCell id="problem-label" value="THE PROBLEM" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#B91C1C;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="124" width="140" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="problem-title" value="Procedure failures" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#991B1B;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="148" width="280" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="problem-body" value="• Happy-path code ships, edge cases 500&lt;br&gt;• Claims sound right, sources never read&lt;br&gt;• SQL runs, silent nulls skew results&lt;br&gt;• Session 2 guesses where session 1 stopped" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=13;fontColor=#7F1D1D;fontFamily=Helvetica;spacingLeft=4;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="60" y="182" width="280" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="loop-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#4F46E5;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="110" width="360" height="340" as="geometry"/>
+        </mxCell>
+        <mxCell id="loop-label" value="FABLE MODE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#4338CA;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="420" y="124" width="120" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="loop-title" value="The Fable Loop" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#312E81;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="420" y="148" width="200" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="step1" value="1. Stage map" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;fontSize=13;fontStyle=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="420" y="190" width="150" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="step2" value="2. Delegate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;fontSize=13;fontStyle=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="590" y="190" width="150" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="step3" value="3. Proof check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;fontSize=13;fontStyle=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="420" y="252" width="150" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="step4" value="4. Delivery review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;fontSize=13;fontStyle=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="590" y="252" width="150" height="44" as="geometry"/>
+        </mxCell>
+        <mxCell id="proof-mini" value="Proof Block&lt;br&gt;PASS | FAIL | UNVERIFIED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;dashed=1;dashPattern=8 8;fontSize=11;fontFamily=Helvetica;fontColor=#5B21B6;" vertex="1" parent="1">
+          <mxGeometry x="420" y="314" width="320" height="52" as="geometry"/>
+        </mxCell>
+        <mxCell id="loop-note" value="Each stage earns the next — like chapters in a fable" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#4338CA;fontFamily=Helvetica;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="378" width="320" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="outcome-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="800" y="110" width="320" height="340" as="geometry"/>
+        </mxCell>
+        <mxCell id="outcome-label" value="THE OUTCOME" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#047857;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="820" y="124" width="140" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="outcome-title" value="Evidence-backed delivery" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#065F46;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="820" y="148" width="280" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="outcome-body" value="• Bugs caught before merge, not in prod&lt;br&gt;• Claims trace to sources actually read&lt;br&gt;• Data checks run before conclusions&lt;br&gt;• Multi-session work stays coherent" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=13;fontColor=#14532D;fontFamily=Helvetica;spacingLeft=4;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="820" y="182" width="280" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94A3B8;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="problem-box" target="loop-box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94A3B8;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="loop-box" target="outcome-box">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="footer" value="Fable Mode — a procedure skill for Cursor and Claude Code  |  Mahip Kakan" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#94A3B8;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="40" y="470" width="1080" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
