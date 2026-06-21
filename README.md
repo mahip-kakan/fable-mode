@@ -530,17 +530,17 @@ The folder name **must match** the `name:` field.
 ### Cursor — personal (all projects)
 
 ```bash
-git clone https://github.com/mahip-kakan/fable-mode-skill.git
-cp -R fable-mode-skill/fable-mode ~/.cursor/skills/fable-mode
-cp -R fable-mode-skill/fable-sonnet ~/.cursor/skills/fable-sonnet
-cp -R fable-mode-skill/fable-fast ~/.cursor/skills/fable-fast
+git clone https://github.com/mahip-kakan/fable-mode.git
+cp -R fable-mode/fable-mode ~/.cursor/skills/fable-mode
+cp -R fable-mode/fable-sonnet ~/.cursor/skills/fable-sonnet
+cp -R fable-mode/fable-fast ~/.cursor/skills/fable-fast
 ```
 
 ### Cursor — project (team repo)
 
 ```bash
 mkdir -p .cursor/skills
-cp -R fable-mode-skill/fable-mode .cursor/skills/
+cp -R fable-mode/fable-mode .cursor/skills/
 # optionally add fable-sonnet and fable-fast
 ```
 
@@ -582,7 +582,7 @@ attribution, SQL nulls, multi-session refactor).
 ## Repository structure
 
 ```text
-fable-mode-skill/
+fable-mode/
 ├── README.md                 ← this file
 ├── EXAMPLES.md               ← worked before/after scenarios
 ├── LICENSE                   ← MIT
