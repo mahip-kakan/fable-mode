@@ -6,7 +6,7 @@ description: >
   each stage, and a skeptical delivery review. Use when the user asks for fable
   mode, systematic execution, deep work, or thorough handling OR when the task
   spans multiple files, sources, or sessions. Skip single-pass trivial tasks.
-  For model-pinned runs use fable-sonnet or fable-fast.
+  For model-pinned runs use fable-sonnet or fable-haiku (alias: fable-fast).
 ---
 
 # Fable Mode

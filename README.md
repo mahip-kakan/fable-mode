@@ -61,6 +61,28 @@ not optional narration.
 
 ---
 
+## Skill architecture (master + variants)
+
+```text
+fable-mode/          ← MASTER — run inline on host model (canonical loop)
+fable-sonnet/        ← VARIANT — spawn Sonnet + pass full loop to subagent
+fable-haiku/         ← VARIANT — spawn Haiku + pass full loop to subagent
+fable-fast/          ← ALIAS  — points to fable-haiku (backward compatibility)
+```
+
+| File | Role |
+|------|------|
+| **`fable-mode/SKILL.md`** | Master skill. Full loop, Proof Blocks, domains, rules. Use for default thorough work on the host model. |
+| **`fable-sonnet/SKILL.md`** | Host orchestration + **complete subagent loop inlined** (not a summary). |
+| **`fable-haiku/SKILL.md`** | Host orchestration + **complete subagent loop inlined** (not a summary). |
+| **`fable-fast/SKILL.md`** | Thin alias — directs to `fable-haiku/SKILL.md`. |
+
+Variant skills **duplicate** the master loop on purpose: subagents do not auto-load
+sibling skills, so the host must pass the full instructions. Each variant states
+`Master skill: fable-mode/SKILL.md` and inlines the loop so nothing is lost.
+
+---
+
 ## The core idea
 
 Think of a complex task as a **fable with chapters**:
@@ -472,11 +494,13 @@ flowchart TB
 
     CHOICE --> FM[fable-mode]
     CHOICE --> FS[fable-sonnet]
-    CHOICE --> FF[fable-fast]
+    CHOICE --> FH[fable-haiku]
+    CHOICE --> FF[fable-fast alias]
 
     FM --> HOST[Host model inline]
     FS --> SON[Sonnet subagent]
-    FF --> FAST[Fast subagent]
+    FH --> HAI[Haiku subagent]
+    FF --> HAI
 
     HOST --> LOOP[Same Fable loop]
     SON --> LOOP
@@ -489,7 +513,11 @@ flowchart TB
 |-------|-------------|----------|
 | **`fable-mode`** | Current host model | Default — peak reasoning on hard tasks |
 | **`fable-sonnet`** | Sonnet subagent | Balanced cost vs quality |
-| **`fable-fast`** | Fast subagent | High-volume, structured, cost-sensitive work |
+| **`fable-haiku`** | Haiku subagent | High-volume, structured, cost-sensitive work |
+| **`fable-fast`** | Alias → `fable-haiku` | Same as Haiku; kept for backward compatibility |
+
+Each variant inlines the **full subagent loop** from `fable-mode/SKILL.md`. The master
+skill is the canonical source; variants add model-specific orchestration.
 
 **Requirements for variants:** Cursor or Claude Code with Agent / Task tooling. Without
 it, run `fable-mode` inline on the host model.
@@ -533,7 +561,8 @@ The folder name **must match** the `name:` field.
 git clone https://github.com/mahip-kakan/fable-mode.git
 cp -R fable-mode/fable-mode ~/.cursor/skills/fable-mode
 cp -R fable-mode/fable-sonnet ~/.cursor/skills/fable-sonnet
-cp -R fable-mode/fable-fast ~/.cursor/skills/fable-fast
+cp -R fable-mode/fable-haiku ~/.cursor/skills/fable-haiku
+cp -R fable-mode/fable-fast ~/.cursor/skills/fable-fast   # optional alias
 ```
 
 ### Cursor — project (team repo)
@@ -541,7 +570,7 @@ cp -R fable-mode/fable-fast ~/.cursor/skills/fable-fast
 ```bash
 mkdir -p .cursor/skills
 cp -R fable-mode/fable-mode .cursor/skills/
-# optionally add fable-sonnet and fable-fast
+# optionally add fable-sonnet and fable-haiku
 ```
 
 ### Claude Code
@@ -587,11 +616,13 @@ fable-mode/
 ├── EXAMPLES.md               ← worked before/after scenarios
 ├── LICENSE                   ← MIT
 ├── fable-mode/
-│   └── SKILL.md              ← main skill (host model)
+│   └── SKILL.md              ← master skill (canonical loop)
 ├── fable-sonnet/
-│   └── SKILL.md              ← Sonnet subagent variant
+│   └── SKILL.md              ← Sonnet subagent (+ full loop inlined)
+├── fable-haiku/
+│   └── SKILL.md              ← Haiku subagent (+ full loop inlined)
 └── fable-fast/
-    └── SKILL.md              ← fast model variant
+    └── SKILL.md              ← alias pointer to fable-haiku
 ```
 
 ---

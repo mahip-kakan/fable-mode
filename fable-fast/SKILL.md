@@ -1,37 +1,28 @@
 ---
 name: fable-fast
 description: >
-  Run Fable Mode discipline on a fast/cheap subagent (Haiku-class) — stage plan,
-  proof-backed verification, delivery review. Use for high-volume structured work
-  ("fable fast", "cheap fable mode", "fable on haiku"). Requires Agent/Task
-  tooling. Skip tasks needing deep synthesis — use fable-mode or fable-sonnet.
+  Alias for fable-haiku — Run Fable Mode on a fast/cheap subagent (Haiku-class).
+  Prefer invoking fable-haiku by name. Same loop as fable-mode/SKILL.md. Use for
+  high-volume structured work ("fable fast", "cheap fable mode"). Requires
+  Agent/Task tooling.
 ---
 
 # Fable Mode — Fast
 
-Run Fable Mode on a **fast model** subagent. Same checklist, lower cost — not peak synthesis.
+> **Note:** `fable-fast` is an alias for **`fable-haiku`**. Both names load the same
+> discipline. Prefer `fable-haiku` for clarity. Full instructions: `fable-haiku/SKILL.md`.
 
-Skip trivial tasks and work needing top-tier reasoning.
+This file exists for backward compatibility. Read and follow **`fable-haiku/SKILL.md`**
+in full — it contains the complete subagent loop, domain patterns, and operational rules
+from the master `fable-mode/SKILL.md`.
 
-## How to run
+## Quick reference (host agent)
 
-1. Confirm Agent / Task tooling exists. If not, run `fable-mode` inline.
-2. Spawn `subagent_type: "generalPurpose"` with the fastest Haiku-class model.
-3. Pass task, paths, context, and **Subagent loop** below.
-4. Highlight `UNVERIFIED` proofs in the relay.
+1. Confirm Agent / Task tooling exists.
+2. Spawn Haiku-class subagent with `subagent_type: "generalPurpose"`.
+3. Pass the user task, paths, context, and the **entire Subagent loop** from
+   `fable-haiku/SKILL.md` — do not summarize.
+4. Relay results; surface `UNVERIFIED` proofs.
+5. Append Fable Mode summary footer.
 
-Parallel fan-out for independent chunks (cap ~6). One delegation level only.
-
-## Subagent loop
-
-**1. Stage map** before edits.
-
-**2. Sequential execution** — no nesting unless authorized.
-
-**3. Proof Block** — PASS / FAIL / UNVERIFIED with command + evidence.
-
-**4. Delivery review** — confirm before flagging.
-
-Escalate to `fable-sonnet` or `fable-mode` if two proofs fail or quality is insufficient.
-
-Return Fable Mode summary footer.
+See `fable-haiku/SKILL.md` for the complete loop.
