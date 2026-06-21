@@ -8,10 +8,41 @@ earns the next.
 
 **Author:** [Mahip Kakan](https://github.com/mahip-kakan)
 
+<p align="center">
+  <img src="docs/diagrams/01-product-overview.png" alt="Fable Mode product overview — problem, loop, outcome" width="920"/>
+</p>
+
+> **Product thesis:** Agent failures are usually *procedure* failures. Fable Mode adds staged discipline and Proof Blocks — evidence that can fail — without pretending to make the model smarter.
+
+---
+
+## Visual guide
+
+<p align="center">
+  <img src="docs/diagrams/02-fable-loop.png" alt="The Fable Loop with Proof Block evidence artifact" width="920"/>
+</p>
+
+<p align="center"><em>The Fable Loop — every stage ends with a Proof Block</em></p>
+
+<p align="center">
+  <img src="docs/diagrams/03-skill-architecture.png" alt="Fable Mode skill architecture — master and variants" width="920"/>
+</p>
+
+<p align="center"><em>Master skill + model-pinned variants (full loop inlined)</em></p>
+
+<p align="center">
+  <img src="docs/diagrams/04-before-after.png" alt="Before and after — one-shot vs Fable Mode" width="920"/>
+</p>
+
+<p align="center"><em>Measured outcome from the test harness: 1 pass / 1 fail → 3 pass / 0 fail</em></p>
+
+Editable sources: [`docs/diagrams/`](docs/diagrams/) (`.excalidraw`, `.svg`, `.png`)
+
 ---
 
 ## Table of contents
 
+- [Visual guide](#visual-guide)
 - [What is Fable Mode?](#what-is-fable-mode)
 - [The core idea](#the-core-idea)
 - [Architecture overview](#architecture-overview)
@@ -504,7 +535,7 @@ flowchart TB
 
     HOST --> LOOP[Same Fable loop]
     SON --> LOOP
-    FAST --> LOOP
+    HAI --> LOOP
 
     LOOP --> SUMMARY[Fable Mode summary]
 ```
@@ -612,17 +643,14 @@ attribution, SQL nulls, multi-session refactor).
 
 ```text
 fable-mode/
-├── README.md                 ← this file
-├── EXAMPLES.md               ← worked before/after scenarios
-├── LICENSE                   ← MIT
-├── fable-mode/
-│   └── SKILL.md              ← master skill (canonical loop)
-├── fable-sonnet/
-│   └── SKILL.md              ← Sonnet subagent (+ full loop inlined)
-├── fable-haiku/
-│   └── SKILL.md              ← Haiku subagent (+ full loop inlined)
-└── fable-fast/
-    └── SKILL.md              ← alias pointer to fable-haiku
+├── README.md
+├── EXAMPLES.md
+├── LICENSE
+├── docs/diagrams/            ← Excalidraw + PNG product diagrams
+├── fable-mode/SKILL.md       ← master skill (canonical loop)
+├── fable-sonnet/SKILL.md
+├── fable-haiku/SKILL.md
+└── fable-fast/SKILL.md       ← alias → fable-haiku
 ```
 
 ---

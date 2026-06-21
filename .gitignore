@@ -1,4 +1,1 @@
-.DS_Store
-*.swp
-.idea/
-.vscode/
+docs/diagrams/.venv/
